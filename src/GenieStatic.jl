@@ -11,3 +11,5 @@ function fetch(di, ur_)
     # TODO: Iterate over URLs and fetch.
 
 end
+
+end
