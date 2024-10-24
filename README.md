@@ -1,6 +1,10 @@
-# GenieStatic.jl
+# Static website generator for [the Genie Framework](https://genieframework.com)
 
-Static website generator for [the Genie Framework](https://genieframework.com).
+## Instruction
+
+```bash
+
+```
 
 ---
 

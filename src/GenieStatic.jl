@@ -1,14 +1,27 @@
 module GenieStatic
 
+using Genie.Router: routes
+
+using HTTP: get
+
+# TODO: Fetch ur and write to ht
 function fetch(ht, ur::AbstractString)
 
-    # TODO: Fetch the URL and write to the HTML. 
+    get
 
 end
 
+# TODO: Iterate over ur_ and fetch
 function fetch(di, ur_)
 
-    # TODO: Iterate over URLs and fetch.
+    routes
+
+end
+
+# TODO: Make paths, save HTMLs, and make /public
+function build(di)
+
+    mkpath
 
 end
 
