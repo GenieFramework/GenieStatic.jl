@@ -4,10 +4,9 @@ using Genie.Router: routes
 
 using HTTP: get
 
-# TODO: Fetch ur and write to ht
 function fetch(ht, ur::AbstractString)
 
-    get
+    write(ht, String(get(ur).body))
 
 end
 
