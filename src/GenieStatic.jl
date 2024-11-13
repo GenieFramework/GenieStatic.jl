@@ -2,25 +2,25 @@ module GenieStatic
 
 using Genie.Router: routes
 
+using GeniePlugins
+
 using HTTP: get
 
-function fetch(ht, ur::AbstractString)
+function install(de)
+
+    GeniePlugins.install(pkgdir(GenieStatic, "install", "plugins"), de; force = true)
+
+end
+
+function get_write(ht, ur::AbstractString)
 
     write(ht, String(get(ur).body))
 
 end
 
-# TODO: Iterate over ur_ and fetch
-function fetch(di, ur_)
+function make(di)
 
-    routes
-
-end
-
-# TODO: Make paths, save HTMLs, and make /public
-function build(di)
-
-    mkpath
+    @info di routes()
 
 end
 

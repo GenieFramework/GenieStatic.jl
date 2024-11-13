@@ -4,8 +4,6 @@ using Test: @test
 
 # ----------------------------------------------------------------------------------------------- #
 
-using HTTP: get
-
 # ---- #
 
 const HT = joinpath(tempdir(), "1.html")
@@ -16,8 +14,4 @@ println(read(HT, String))
 
 # ---- #
 
-GenieStatic.fetch
-
-# ---- #
-
-GenieStatic.build
+GenieStatic.make(tempdir())
