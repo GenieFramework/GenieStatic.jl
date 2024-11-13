@@ -7,18 +7,13 @@
 ```bash
 cd MyApp
 
-mkdir public
-
-ls public
-
 julia --project
 ```
 
 ```julia
 ]add https://github.com/GenieFramework/GenieStatic.jl
 
-#using GenieFramework
-using Genie
+using Genie # or GenieFramework
 
 using GenieStatic
 
@@ -33,11 +28,11 @@ GenieStatic.make("public", "http://localhost:8000")
 ls public
 ```
 
-For now, remove the `<style>` block from the `<head>`.
-
 ```bash
 open public/index.html
 ```
+
+The default layout does not render correctly; try removing `<style>`.
 
 ---
 

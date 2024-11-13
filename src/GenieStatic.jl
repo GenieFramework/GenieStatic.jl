@@ -4,29 +4,31 @@ using Genie.Router: routes
 
 using HTTP: get
 
-function _get_write(ht, ur)
+function _get_write(fi, ur)
 
-    @info "$ur ➡ $ht"
+    @info "$ur 📥 $fi"
 
-    write(ht, String(get(ur).body))
+    write(fi, String(get(ur).body))
 
 end
 
-function make(di, ba)
+function make(di, ur)
 
     for ro in routes()
 
-        pa = ro.path
+        pa = ro.path[2:end]
 
-        if ro.method == "GET" &&
-           !(contains(pa, "_devtools_") || contains(pa, "genie") || contains(pa, "stipple"))
+        if ro.method == "GET" && !(
+            startswith(pa, "_devtools_") ||
+            startswith(pa, "genie") ||
+            startswith(pa, "stipple")
+        )
 
-            na = ro.path[2:end]
+            fi = joinpath(di, isempty(pa) ? "index.html" : "$pa.html")
 
-            _get_write(
-                joinpath(di, isempty(na) ? "index.html" : "$na.html"),
-                joinpath(ba, na),
-            )
+            mkpath(dirname(fi))
+
+            _get_write(fi, joinpath(ur, pa))
 
         end
 
