@@ -33,6 +33,12 @@ GenieStatic.make("public", "http://localhost:8000")
 ls public
 ```
 
+For now, remove the `<style>` block from the `<head>`.
+
+```bash
+open public/index.html
+```
+
 ---
 
 Made by [Kata](https://github.com/KwatMDPhD/Kata.jl) 🥋
