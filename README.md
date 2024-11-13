@@ -1,6 +1,6 @@
 # Static website generator for [the Genie Framework](https://genieframework.com)
 
-KwatMDPhD.com is made using this plugin.
+[KwatMDPhD.com](KwatMDPhD.com) is made using this plugin.
 
 ## Instruction
 
