@@ -1,6 +1,6 @@
 # Static website generator for [the Genie Framework](https://genieframework.com)
 
-[KwatMDPhD.com](KwatMDPhD.com) is made using this plugin.
+[KwatMDPhD.com](https://KwatMDPhD.com) is made using this plugin.
 
 ## Instruction
 
@@ -10,6 +10,8 @@ cd MyApp
 mkdir public
 
 ls public
+
+julia --project
 ```
 
 ```julia
