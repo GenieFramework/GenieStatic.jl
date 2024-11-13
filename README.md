@@ -13,7 +13,9 @@ julia --project
 ```julia
 ]add https://github.com/GenieFramework/GenieStatic.jl
 
-using Genie # or GenieFramework
+using Genie
+# or
+#using GenieFramework
 
 using GenieStatic
 
