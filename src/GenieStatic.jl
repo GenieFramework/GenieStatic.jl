@@ -2,25 +2,35 @@ module GenieStatic
 
 using Genie.Router: routes
 
-using GeniePlugins
-
 using HTTP: get
 
-function install(de)
+function _get_write(ht, ur)
 
-    GeniePlugins.install(pkgdir(GenieStatic, "install", "plugins"), de; force = true)
-
-end
-
-function get_write(ht, ur::AbstractString)
+    @info "$ur ➡ $ht"
 
     write(ht, String(get(ur).body))
 
 end
 
-function make(di)
+function make(di, ba)
 
-    @info di routes()
+    for ro in routes()
+
+        pa = ro.path
+
+        if ro.method == "GET" &&
+           !(contains(pa, "_devtools_") || contains(pa, "genie") || contains(pa, "stipple"))
+
+            na = ro.path[2:end]
+
+            _get_write(
+                joinpath(di, isempty(na) ? "index.html" : "$na.html"),
+                joinpath(ba, na),
+            )
+
+        end
+
+    end
 
 end
 
