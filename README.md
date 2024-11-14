@@ -32,9 +32,9 @@ ls public
 
 ```bash
 open public/index.html
+# or
+# npx http-server -c-1
 ```
-
-The default layout does not render correctly; try removing `<style>`.
 
 ---
 
