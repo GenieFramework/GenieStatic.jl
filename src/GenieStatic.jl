@@ -12,29 +12,21 @@ function _get_write(fi, ur)
 
 end
 
-# TODO: Ignore URLs
-function make(di, ba)
+function make(di, ba, co = r"^/(?!_devtools_|genie|stipple)")
 
     for ro in routes()
 
-        ru = ro.path[2:end]
+        if ro.method == "GET" && contains(ro.path, co)
 
-        if ro.method == "GET" &&
-           !(startswith(ru, "_devtools_") || startswith(ru, "geniepackagemanager"))
+            re = ro.path[2:end]
 
-            rf = isempty(ru) ? "index" : ru
+            fi = isempty(re) ? "index" : re
 
-            if !contains(basename(rf), '.')
-
-                rf *= ".html"
-
-            end
-
-            fi = joinpath(di, rf)
+            fi = joinpath(di, contains(basename(fi), '.') ? fi : "$fi.html")
 
             mkpath(dirname(fi))
 
-            _get_write(fi, joinpath(ba, ru))
+            _get_write(fi, joinpath(ba, re))
 
         end
 
