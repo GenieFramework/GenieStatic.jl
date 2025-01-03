@@ -8,22 +8,34 @@ function _get_write(fi, ur)
 
     @info "$ur 📥 $fi"
 
-    # TODO: r" +|\n" => ' '
+    # TODO: Minimize
     write(fi, String(get(ur).body))
 
 end
 
-function make(di, ba, co = r"^/(?!_devtools_|genie|stipple)")
+function make(di, ba, se = r"^/(?!_devtools_|genie|stipple)")
 
     for ro in routes()
 
-        if ro.method == "GET" && contains(ro.path, co)
+        if ro.method == "GET" && contains(ro.path, se)
 
             re = ro.path[2:end]
 
-            fi = isempty(re) ? "index" : re
+            fi = if isempty(re)
 
-            fi = joinpath(di, contains(basename(fi), '.') ? fi : "$fi.html")
+                "index.html"
+
+            elseif isempty(splitext(re)[2])
+
+                "$re.html"
+
+            else
+
+                re
+
+            end
+
+            fi = joinpath(di, fi)
 
             mkpath(dirname(fi))
 
