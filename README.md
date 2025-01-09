@@ -27,10 +27,6 @@ GenieStatic.make("public", "http://localhost:8000")
 ```
 
 ```bash
-ls public
-```
-
-```bash
 open public/index.html
 # or
 # npx http-server -c-1
