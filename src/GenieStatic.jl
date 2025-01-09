@@ -8,8 +8,7 @@ function _get_write(fi, ur)
 
     @info "$ur 📥 $fi"
 
-    # TODO: Minimize
-    write(fi, String(get(ur).body))
+    write(fi, replace(String(get(ur).body), r" +|\n" => ' '))
 
 end
 
