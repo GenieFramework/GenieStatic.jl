@@ -2,8 +2,6 @@
 
 [KwatMDPhD.com](https://KwatMDPhD.com) is made using this.
 
-## Instruction
-
 ```bash
 cd MyApp
 
