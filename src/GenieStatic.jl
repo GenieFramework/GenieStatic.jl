@@ -1,5 +1,7 @@
 module GenieStatic
 
+# ----------------------------------------------------------------------------------------------- #
+
 using Genie.Router: routes
 
 using HTTP: get
