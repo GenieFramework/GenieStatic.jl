@@ -136,9 +136,9 @@ version = "6.3.0+0"
 
 [[deps.Genie]]
 deps = ["ArgParse", "Base64", "Dates", "Distributed", "DotEnv", "EzXML", "FilePathsBase", "HTTP", "HttpCommon", "Inflector", "JSON3", "JuliaFormatter", "Logging", "LoggingExtras", "LoweredCodeUtils", "MIMEs", "Markdown", "Millboard", "Nettle", "OrderedCollections", "Pkg", "REPL", "Random", "Reexport", "Revise", "SHA", "Serialization", "Sockets", "UUIDs", "Unicode", "XML2_jll", "YAML"]
-git-tree-sha1 = "6b1283b541f467ae6830d6066535bd6f73a3e808"
+git-tree-sha1 = "f7940ef505b56012f58a57275aea849ab24d207c"
 uuid = "c43c736e-a2d1-11e8-161f-af95117fbd1e"
-version = "5.31.1"
+version = "5.32.0"
 
 [[deps.Glob]]
 git-tree-sha1 = "97285bbd5230dd766e9ef6749b80fc617126d496"
@@ -250,9 +250,9 @@ uuid = "6f1432cf-f94c-5a45-995e-cdbf5db27b0b"
 version = "3.1.0"
 
 [[deps.MIMEs]]
-git-tree-sha1 = "65f28ad4b594aebe22157d6fac869786a255b7eb"
+git-tree-sha1 = "1833212fd6f580c20d4291da9c1b4e8a655b128e"
 uuid = "6c6e2e6c-3030-632d-7369-2d6c69616d65"
-version = "0.1.4"
+version = "1.0.0"
 
 [[deps.Markdown]]
 deps = ["Base64"]
@@ -469,9 +469,9 @@ version = "1.11.0"
 
 [[deps.XML2_jll]]
 deps = ["Artifacts", "JLLWrappers", "Libdl", "Libiconv_jll", "Zlib_jll"]
-git-tree-sha1 = "04a51d15436a572301b5abbb9d099713327e9fc4"
+git-tree-sha1 = "a2fccc6559132927d4c5dc183e3e01048c6dcbd6"
 uuid = "02c8fc9c-b97f-50b9-bbe4-9be30ff0a78a"
-version = "2.10.4+0"
+version = "2.13.5+0"
 
 [[deps.YAML]]
 deps = ["Base64", "Dates", "Printf", "StringEncodings"]
