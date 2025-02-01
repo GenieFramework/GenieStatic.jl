@@ -22,7 +22,7 @@ function make(di, ba, se = r"^/(?!_devtools_|genie|stipple)")
 
             re = ro.path[2:end]
 
-            fi = if isempty(re)
+            fi = joinpath(di, if isempty(re)
 
                 "index.html"
 
@@ -34,9 +34,7 @@ function make(di, ba, se = r"^/(?!_devtools_|genie|stipple)")
 
                 re
 
-            end
-
-            fi = joinpath(di, fi)
+            end)
 
             mkpath(dirname(fi))
 
