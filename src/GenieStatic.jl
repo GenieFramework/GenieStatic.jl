@@ -8,37 +8,35 @@ using HTTP: get
 
 function _get_write(fi, ur)
 
-    @info "$ur 📥 $fi"
-
     write(fi, replace(String(get(ur).body), r" +|\n" => ' '))
 
 end
 
-function make(di, ba, se = r"^/(?!_devtools_|genie|stipple)")
+function make(di, ur, co = r"^/(?!_devtools_|genie|stipple)")
 
     for ro in routes()
 
-        if ro.method == "GET" && contains(ro.path, se)
+        if ro.method == "GET" && contains(ro.path, co)
 
-            re = ro.path[2:end]
+            pa = ro.path[2:end]
 
-            fi = joinpath(di, if isempty(re)
+            fi = joinpath(di, if isempty(pa)
 
                 "index.html"
 
-            elseif isempty(splitext(re)[2])
+            elseif isempty(rsplit(pa, '.'; limit = 2)[2])
 
-                "$re.html"
+                "$pa.html"
 
             else
 
-                re
+                pa
 
             end)
 
             mkpath(dirname(fi))
 
-            _get_write(fi, joinpath(ba, re))
+            _get_write(fi, joinpath(ur, pa))
 
         end
 
