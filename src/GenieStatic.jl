@@ -6,13 +6,13 @@ using Genie.Router: routes
 
 using HTTP: get
 
-function _get_write(fi, ur)
+function _write(fi, ur)
 
     write(fi, replace(String(get(ur).body), r" +|\n" => ' '))
 
 end
 
-function make(di, ur, co = r"^/(?!_devtools_|genie|stipple)")
+function writ(di, ur, co = r"^/(?!_devtools_|genie|stipple)")
 
     for ro in routes()
 
@@ -36,7 +36,7 @@ function make(di, ur, co = r"^/(?!_devtools_|genie|stipple)")
 
             mkpath(dirname(fi))
 
-            _get_write(fi, joinpath(ur, pa))
+            _write(fi, joinpath(ur, pa))
 
         end
 
