@@ -12,33 +12,35 @@ function _write(fi, ur)
 
 end
 
-function writ(di, ur, co = r"^/(?!_devtools_|genie|stipple)")
+function writ(di, ur, co = r"^/(_devtools_|genie|stipple)")
 
     for ro in routes()
 
-        if ro.method == "GET" && contains(ro.path, co)
+        if ro.method != "GET" || contains(ro.path, co)
 
-            pa = ro.path[2:end]
-
-            fi = joinpath(di, if isempty(pa)
-
-                "index.html"
-
-            elseif isempty(rsplit(pa, '.'; limit = 2)[2])
-
-                "$pa.html"
-
-            else
-
-                pa
-
-            end)
-
-            mkpath(dirname(fi))
-
-            _write(fi, joinpath(ur, pa))
+            continue
 
         end
+
+        pa = ro.path[2:end]
+
+        fi = joinpath(di, if isempty(pa)
+
+            "index.html"
+
+        elseif isempty(splitext(pa)[2])
+
+            "$pa.html"
+
+        else
+
+            pa
+
+        end)
+
+        mkpath(dirname(fi))
+
+        _write(fi, joinpath(ur, pa))
 
     end
 
