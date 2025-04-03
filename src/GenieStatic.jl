@@ -6,35 +6,35 @@ using Genie.Router: routes
 
 using HTTP: get
 
-function writ(di, u1, re = r"^/(_devtools_|genie|stipple)")
+function writ(di, ur, st = r"^/(_devtools_|genie|stipple)")
 
     for ro in routes()
 
-        if ro.method != "GET" || contains(ro.path, re)
+        if ro.method != "GET" || contains(ro.path, st)
 
             continue
 
         end
 
-        u2 = ro.path[2:end]
+        pa = ro.path[2:end]
 
-        fi = joinpath(di, if isempty(u2)
+        fi = joinpath(di, if isempty(pa)
 
             "index.html"
 
-        elseif isempty(splitext(u2)[2])
+        elseif isempty(splitext(pa)[2])
 
-            "$u2.html"
+            "$pa.html"
 
         else
 
-            u2
+            pa
 
         end)
 
         mkpath(dirname(fi))
 
-        write(fi, replace(String(get(joinpath(u1, u2)).body), r" +|\n" => ' '))
+        write(fi, replace(String(get(joinpath(ur, pa)).body), r" +|\n" => ' '))
 
     end
 
