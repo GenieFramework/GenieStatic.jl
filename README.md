@@ -5,15 +5,15 @@
 ```julia
 ]add https://github.com/GenieFramework/GenieStatic.jl
 
-using Genie
+using Genie: loadapp, up
 
-using GenieStatic
+using GenieStatic: writ
 
-Genie.loadapp()
+loadapp()
 
 up()
 
-GenieStatic.writ("public", "http://localhost:8000")
+writ("public", "http://localhost:8000")
 ```
 
 ```bash
