@@ -1,14 +1,12 @@
 name = "GenieStatic"
 uuid = "f2e4b510-c1ab-4458-b5e8-4b1b3e33e260"
-authors = ["KwatMDPhD"]
 version = "0.1.0"
+authors = ["KwatMDPhD"]
 
 [deps]
 Genie = "c43c736e-a2d1-11e8-161f-af95117fbd1e"
 HTTP = "cd3eb016-35fb-5094-929b-558a96fad6f3"
-Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
 [compat]
 Genie = "5.30.7"
 HTTP = "1.10.8"
-Test = "1.11.0"

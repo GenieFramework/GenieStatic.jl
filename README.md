@@ -7,13 +7,13 @@
 
 using Genie: loadapp, up
 
-using GenieStatic: writ
+using GenieStatic: write2
 
 loadapp()
 
 up()
 
-writ("public", "http://localhost:8000")
+write2("public", "http://localhost:8000")
 ```
 
 ```bash
