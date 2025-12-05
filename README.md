@@ -22,4 +22,4 @@ open public/index.html
 
 ---
 
-Made by [Kata](https://github.com/KwatMDPhD/Kata.jl) 🥋
+Made by [Kata](https://github.com/KwatMDPhD/Kata.jl) ✅
