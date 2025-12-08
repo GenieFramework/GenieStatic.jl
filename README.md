@@ -3,8 +3,6 @@
 [KwatMDPhD.com](https://KwatMDPhD.com) is made using this.
 
 ```julia
-]add https://github.com/GenieFramework/GenieStatic.jl
-
 using Genie: loadapp, up
 
 using GenieStatic: write2
