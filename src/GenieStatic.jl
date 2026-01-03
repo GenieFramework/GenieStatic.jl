@@ -1,5 +1,9 @@
 module GenieStatic
 
+const P1 = pkgdir(GenieStatic, "in")
+
+const P2 = pkgdir(GenieStatic, "ou")
+
 # ------------------------------------ #
 
 using Genie.Router: routes
