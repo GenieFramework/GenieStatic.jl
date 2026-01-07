@@ -10,11 +10,18 @@ using Genie.Router: routes
 
 using HTTP: get
 
-function write2(p1, p2, st = r"^/(_devtools_|genie|stipple)")
+function write2(
+    p1,
+    p2,
+    fu = st ->
+        startswith(st, "/_devtools_") ||
+        startswith(st, "/genie") ||
+        startswith(st, "/stipple"),
+)
 
     for an in routes()
 
-        if an.method != "GET" || contains(an.path, st)
+        if an.method != "GET" || fu(an.path)
 
             continue
 

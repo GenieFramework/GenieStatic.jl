@@ -6,7 +6,3 @@ authors = ["KwatMDPhD"]
 [deps]
 Genie = "c43c736e-a2d1-11e8-161f-af95117fbd1e"
 HTTP = "cd3eb016-35fb-5094-929b-558a96fad6f3"
-
-[compat]
-Genie = "5.30.7"
-HTTP = "1.10.8"
