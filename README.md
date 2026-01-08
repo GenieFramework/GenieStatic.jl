@@ -14,7 +14,7 @@ up()
 write2("public", "http://localhost:8000")
 ```
 
-```bash
+```zsh
 open public/index.html
 ```
 
