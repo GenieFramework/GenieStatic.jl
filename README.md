@@ -2,6 +2,8 @@
 
 [KwatMDPhD.com](https://KwatMDPhD.com) is made using this.
 
+## Use
+
 ```julia
 using Genie: loadapp, up
 
