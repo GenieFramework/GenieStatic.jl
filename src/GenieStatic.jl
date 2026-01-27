@@ -47,7 +47,16 @@ function write2(
 
         mkpath(dirname(p4))
 
-        write(p4, replace(String(get(joinpath(p2, p3)).body), r" +|\n" => ' '))
+        write(
+            p4,
+            strip(
+                replace(String(get(joinpath(p2, p3)).body)),
+                r"\s+" => ' ',
+                r">\s+<" => "><",
+                r"<\s+" => '<',
+                r"\s+>" => '>',
+            ),
+        )
 
     end
 
