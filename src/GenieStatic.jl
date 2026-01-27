@@ -50,11 +50,13 @@ function write2(
         write(
             p4,
             strip(
-                replace(String(get(joinpath(p2, p3)).body)),
-                r"\s+" => ' ',
-                r">\s+<" => "><",
-                r"<\s+" => '<',
-                r"\s+>" => '>',
+                replace(
+                    String(get(joinpath(p2, p3)).body),
+                    r"\s+" => ' ',
+                    r">\s+<" => "><",
+                    r"<\s+" => '<',
+                    r"\s+>" => '>',
+                ),
             ),
         )
 
