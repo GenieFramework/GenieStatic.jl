@@ -1,4 +1,4 @@
-# Static website generator for [the Genie Framework](https://genieframework.com) 🖨️
+# Static website generator for the [Genie Framework](https://genieframework.com) 🖨️
 
 [KwatMDPhD.com](https://KwatMDPhD.com) is made using this.
 
