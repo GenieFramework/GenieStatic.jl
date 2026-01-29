@@ -1,6 +1,6 @@
 # Static website generator for the [Genie Framework](https://genieframework.com) 🖨️
 
-[KwatMDPhD.com](https://KwatMDPhD.com) is made using this.
+Published [KwatMDPhD.com](https://KwatMDPhD.com).
 
 ## Use
 
