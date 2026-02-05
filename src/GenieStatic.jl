@@ -39,8 +39,6 @@ function write2(
 
         else
 
-            @warn p3
-
             p3
 
         end)
